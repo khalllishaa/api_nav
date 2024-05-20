@@ -21,6 +21,10 @@
         android:icon="@drawable/baseline_person_24"
         android:title="Name Countries" />
     <item
+        android:id="@+id/Leagues"
+        android:icon="@drawable/baseline_person_24"
+        android:title="Leagues" />
+    <item
         android:id="@+id/akun"
         android:icon="@drawable/baseline_person_24"
         android:title="Akun" />

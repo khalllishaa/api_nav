@@ -95,7 +95,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="50sp"
             android:fontFamily="@font/psb"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:background="@drawable/background"
             android:layout_gravity="center"
             android:gravity="center"/>
@@ -130,7 +130,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="50sp"
             android:fontFamily="@font/psb"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:background="@drawable/background"
             android:layout_gravity="center"
             android:gravity="center"/>

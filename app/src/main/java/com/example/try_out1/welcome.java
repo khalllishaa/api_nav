@@ -12,6 +12,7 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 import com.bumptech.glide.Glide;
 import com.example.try_out1.Event.chelsea;
+import com.example.try_out1.League.leaguues;
 import com.example.try_out1.Team.arsenal;
 import com.example.try_out1.countries.Countriess;
 import com.example.try_out1.countries.Countriies;
@@ -70,6 +71,11 @@ public class welcome extends AppCompatActivity {
                 } else if (itemId == R.id.Name) {
                     getSupportFragmentManager().beginTransaction()
                             .replace(R.id.content_frame, new namee())
+                            .commit();
+                    getSupportActionBar().setTitle("Name Countries");
+                } else if (itemId == R.id.Leagues) {
+                    getSupportFragmentManager().beginTransaction()
+                            .replace(R.id.content_frame, new leaguues())
                             .commit();
                     getSupportActionBar().setTitle("Name Countries");
                 } else if (itemId == R.id.akun) {
