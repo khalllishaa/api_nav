@@ -15,6 +15,7 @@ import com.example.try_out1.Event.chelsea;
 import com.example.try_out1.Team.arsenal;
 import com.example.try_out1.countries.Countriess;
 import com.example.try_out1.countries.Countriies;
+import com.example.try_out1.namee.namee;
 import com.example.try_out1.spain.spains;
 import com.google.android.material.navigation.NavigationView;
 
@@ -66,6 +67,11 @@ public class welcome extends AppCompatActivity {
                             .replace(R.id.content_frame, new Countriies())
                             .commit();
                     getSupportActionBar().setTitle("Countries");
+                } else if (itemId == R.id.Name) {
+                    getSupportFragmentManager().beginTransaction()
+                            .replace(R.id.content_frame, new namee())
+                            .commit();
+                    getSupportActionBar().setTitle("Name Countries");
                 } else if (itemId == R.id.akun) {
                     // Ganti dengan memulai aktivitas HomeAct
                     Intent intent = new Intent(welcome.this, HomeAct.class);

@@ -38,7 +38,7 @@ public class splash_screen extends AppCompatActivity {
 
                 }else{
                     // intent ke home
-                    intent = new Intent(splash_screen.this, HomeAct.class);
+                    intent = new Intent(splash_screen.this, welcome.class);
                 }
                 startActivity(intent);
                 finish();
