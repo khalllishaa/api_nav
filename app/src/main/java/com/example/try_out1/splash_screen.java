@@ -20,12 +20,6 @@ public class splash_screen extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_splash_screen);
 
-        ImageView imageView = findViewById(R.id.imageView);
-        String imageUrl = "https://i.pinimg.com/474x/09/aa/3c/09aa3c855d4acb7ba1d2441a0a2f265c.jpg";
-        Glide.with(this)
-                .load(imageUrl)
-                .into(imageView);
-
         final Handler handler = new Handler();
         handler.postDelayed(new Runnable() {
             @Override
@@ -49,6 +43,6 @@ public class splash_screen extends AppCompatActivity {
                 startActivity(intent);
                 finish();
             }
-        }, 2000);
+        }, 5000);
     }
 }

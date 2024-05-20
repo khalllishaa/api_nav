@@ -1,11 +1,9 @@
 package com.example.try_out1.Event;
 
-import com.example.try_out1.Team.TeamResponse;
-
 import retrofit2.Call;
 import retrofit2.http.GET;
 
 public interface EventService {
-    @GET("search_all_leagues.php?c=England")
+    @GET("searchevents.php?e=Arsenal_vs_Chelsea&s=2016-2017")
     Call<EventResponse> getEvent();
 }

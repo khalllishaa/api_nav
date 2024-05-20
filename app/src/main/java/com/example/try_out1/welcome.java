@@ -13,6 +13,9 @@ import androidx.fragment.app.Fragment;
 import com.bumptech.glide.Glide;
 import com.example.try_out1.Event.chelsea;
 import com.example.try_out1.Team.arsenal;
+import com.example.try_out1.countries.Countriess;
+import com.example.try_out1.countries.Countriies;
+import com.example.try_out1.spain.spains;
 import com.google.android.material.navigation.NavigationView;
 
 public class welcome extends AppCompatActivity {
@@ -46,9 +49,23 @@ public class welcome extends AppCompatActivity {
                 Fragment selectedFragment = null;
 
                 if (itemId == R.id.Arsenal) {
-                    selectedFragment = new arsenal();
+                    showHomePage();
+                    getSupportActionBar().setTitle("Arsenal");
                 } else if (itemId == R.id.Chelsea) {
-                    selectedFragment = new chelsea();
+                    getSupportFragmentManager().beginTransaction()
+                            .replace(R.id.content_frame, new chelsea())
+                            .commit();
+                    getSupportActionBar().setTitle("Chealsea");
+                } else if (itemId == R.id.Spain) {
+                    getSupportFragmentManager().beginTransaction()
+                            .replace(R.id.content_frame, new spains())
+                            .commit();
+                    getSupportActionBar().setTitle("Spain");
+                } else if (itemId == R.id.Countries) {
+                    getSupportFragmentManager().beginTransaction()
+                            .replace(R.id.content_frame, new Countriies())
+                            .commit();
+                    getSupportActionBar().setTitle("Countries");
                 } else if (itemId == R.id.akun) {
                     // Ganti dengan memulai aktivitas HomeAct
                     Intent intent = new Intent(welcome.this, HomeAct.class);

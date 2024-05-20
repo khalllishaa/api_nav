@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         editTextName = findViewById(R.id.name);
-        editTextEmail = findViewById(R.id.email);
+        editTextEmail = findViewById(R.id.pw);
         login = findViewById(R.id.masuk);
         signup = findViewById(R.id.signup);
 
@@ -53,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
                 editor.apply();
 
                 // Move to HomeAct
-                Intent intent = new Intent(MainActivity.this, welcome.class);
+                Intent intent = new Intent(MainActivity.this, HomeAct.class);
                 startActivity(intent);
                 Toast.makeText(MainActivity.this, "Sign Up Success!", Toast.LENGTH_SHORT).show();
                 finish(); // Finish MainActivity
@@ -76,7 +76,7 @@ public class MainActivity extends AppCompatActivity {
                     editor.putString(KEY_EMAIL, email);
                     editor.apply();
 
-                    // If correct, move to welcome activity
+                    // If correct, move to HomeAct
                     Intent intent = new Intent(MainActivity.this, welcome.class);
                     startActivity(intent);
                     Toast.makeText(MainActivity.this, "Login Success!", Toast.LENGTH_SHORT).show();
@@ -86,6 +86,5 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
-
     }
 }

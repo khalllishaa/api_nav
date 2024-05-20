@@ -1,4 +1,4 @@
-package com.example.try_out1.Team;
+package com.example.try_out1.spain;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -15,12 +15,12 @@ import com.example.try_out1.R;
 
 import java.util.List;
 
-public class TeamAdapter extends RecyclerView.Adapter<TeamAdapter.ViewHolder> {
-    private List<Team> teamList;
-    private LayoutInflater inflater; // java ke design xml
+public class TimAdapter extends RecyclerView.Adapter<TimAdapter.ViewHolder> {
+    private List<Tim> teamList;
+    private LayoutInflater inflater;
 
     // Constructor accepting context and teamList
-    TeamAdapter(Context context, List<Team> teamList){
+    public TimAdapter(Context context, List<Tim> teamList){
         this.teamList = teamList;
         this.inflater = LayoutInflater.from(context);
     }
@@ -34,7 +34,7 @@ public class TeamAdapter extends RecyclerView.Adapter<TeamAdapter.ViewHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        Team team = teamList.get(position);
+        Tim team = teamList.get(position);
         holder.bind(team);
     }
 
@@ -53,10 +53,10 @@ public class TeamAdapter extends RecyclerView.Adapter<TeamAdapter.ViewHolder> {
             teamImage = itemView.findViewById(R.id.image);
         }
 
-        public void bind(Team team) {
+        public void bind(Tim team) {
             // Bind data to views
             teamName.setText(team.getStrTeam());
-            // Assuming you use an image loading library like Glide, load the image here
+            // Load the image using Glide
             Glide.with(itemView.getContext())
                     .load(team.getStrTeamBadge())
                     .into(teamImage);

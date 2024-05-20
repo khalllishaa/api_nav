@@ -9,10 +9,6 @@ import android.view.ViewGroup;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
 import com.example.try_out1.R;
-import com.example.try_out1.Team.Team;
-import com.example.try_out1.Team.TeamAdapter;
-import com.example.try_out1.Team.TeamResponse;
-import com.example.try_out1.Team.TeamService;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -61,6 +57,7 @@ public class arsenal extends Fragment {
                     if (teamResponse != null && teamResponse.getTeams() != null) {
                         teamList.addAll(teamResponse.getTeams());
                         adapter.notifyDataSetChanged();
+                        System.out.println("panggilan berhasil");
                     }
                 } else {
                     // Handle unsuccessful response
